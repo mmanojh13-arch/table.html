@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Tables in HTML</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(135deg,
+                #00c6ff, #0072ff, #302b63);
+            background-size: 200% 200%;
+            animation: backgroundMove 8s ease infinite;
+        }
+
+        @keyframes backgroundMove {
+            0%   { background-position: 0% 50%; }
+            50%  { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            padding: 35px 6%;
+        }
+
+        /* Heading section */
+        .heading {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+            margin-bottom: 35px;
+            flex-wrap: wrap;
+        }
+
+        .html-logo {
+            width: 85px;
+            height: 100px;
+            filter: drop-shadow(0 5px 10px #001b4d);
+            transition: transform 0.4s;
+        }
+
+        .html-logo:hover {
+            transform: rotate(-8deg) scale(1.1);
+        }
+
+        .title {
+            margin: 0;
+            font-size: clamp(27px, 4vw, 42px);
+            font-weight: bold;
+            background: linear-gradient(90deg,
+                #ffffff, #ffe082, #ffffff);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            filter: drop-shadow(0 3px 5px #003b8e);
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 16px;
+            color: #e4f5ff;
+            margin-top: -20px;
+            margin-bottom: 30px;
+        }
+
+        /* Table glass effect */
+        .table-card {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 40, 0.3);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 7px;
+        }
+
+        th, td {
+            padding: 17px 12px;
+            text-align: center;
+            font-size: 17px;
+            transition: all 0.3s ease;
+        }
+
+        /* Different heading colors */
+        th:nth-child(1) {
+            background: linear-gradient(135deg,
+                #ff6b6b, #ee0979);
+            color: white;
+        }
+
+        th:nth-child(2) {
+            background: linear-gradient(135deg,
+                #00b894, #55efc4);
+            color: #073b32;
+        }
+
+        th:nth-child(3) {
+            background: linear-gradient(135deg,
+                #8e44ad, #c56cf0);
+            color: white;
+        }
+
+        th {
+            font-size: 18px;
+            letter-spacing: 0.5px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Table data cells */
+        td {
+            background: rgba(255, 245, 220, 0.96);
+            color: #26344a;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+
+        /* Hover effect */
+        tbody tr:hover td {
+            background: #ffffff;
+            color: #005bea;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        tbody tr {
+            transition: all 0.3s ease;
+        }
+
+        .footer {
+            margin-top: 25px;
+            text-align: center;
+            color: #e4f5ff;
+            font-size: 14px;
+        }
+
+        .badge {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Mobile responsive design */
+        @media (max-width: 500px) {
+            .container {
+                padding: 25px 12px;
+            }
+
+            .heading {
+                gap: 10px;
+            }
+
+            .html-logo {
+                width: 60px;
+                height: 75px;
+            }
+
+            .table-card {
+                padding: 8px;
+            }
+
+            th, td {
+                padding: 13px 5px;
+                font-size: 14px;
+            }
+
+            th {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Page heading -->
+        <div class="heading">
+
+            <!-- HTML5 logo -->
+            <svg class="html-logo"
+                 viewBox="0 0 100 120"
+                 xmlns="http://www.w3.org/2000/svg"
+                 aria-label="HTML5 logo" role="img">
+
+                <path d="M5 5 H95 L86 105 L50 118 L14 105 Z"
+                      fill="#e44d26"/>
+
+                <path d="M50 15 H85 L77 98 L50 108 Z"
+                      fill="#f16529"/>
+
+                <path d="M23 29 H77 L75 40 H36
+                         L38 51 H73 L69 79
+                         L50 87 L31 79 L30 65
+                         H41 L42 71 L50 74
+                         L59 71 L60 62 H28 Z"
+                      fill="#ffffff"/>
+
+            </svg>
+
+            <h1 class="title">Create Tables in HTML</h1>
+
+        </div>
+
+        <p class="subtitle">
+            Learn HTML Tables with a Modern Design ✨
+        </p>
+
+        <!-- Table section -->
+        <div class="table-card">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Manoj</td>
+                        <td>21</td>
+                        <td>₹25,000</td>
+                    </tr>
+
+                    <tr>
+                        <td>Rahul</td>
+                        <td>24</td>
+                        <td>₹35,000</td>
+                    </tr>
+
+                    <tr>
+                        <td>Priya</td>
+                        <td>22</td>
+                        <td>₹32,000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="badge">
+                ✨ Designed with HTML & CSS
+            </div>
+            <p>Web Development Practical</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
