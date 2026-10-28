@@ -2,38 +2,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>HTML & CSS Assignment</title>
+<title>My Profile</title>
 <style>
-body { font-family: Arial; color: #102344; }
-.frame {
-    background: #f0f7ff;
-    border: 1px solid #83b7ff;
-    border-radius: 9px;
-    padding: 12px;
-    max-width: 520px;
-    margin: auto;
-}
-h1 { font-size: 22px; }
-li { font-size: 12px; margin: 8px 0; }
-hr { border: 1px solid #9cc5ff; }
-p { font-size: 12px; }
-.happy { color: blue; }
+body{font-family:Arial;color:#102344;padding:10px}
+.frame{max-width:650px;margin:auto;background:#faf7ff;border:2px solid #a18af5;border-radius:15px;overflow:hidden}
+nav{display:flex;justify-content:flex-end;gap:20px;padding:18px;background:#f0eaff}
+nav a{text-decoration:none;color:#102344}
+.profile{display:flex;align-items:center;gap:20px;padding:25px}
+.intro{flex:1}
+h1{font:36px Georgia}
+p{line-height:1.6}
+img{width:43%;height:185px;object-fit:cover;border:3px solid white;border-radius:7px}
+.button{background:#3168ed;color:white;padding:12px;border-radius:8px;text-decoration:none}
+.details{display:grid;grid-template-columns:0.8fr 1.6fr;gap:12px;padding:15px}
+.box{border:1px solid #b4a1f4;border-radius:7px;padding:12px;min-width:0}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th,td{border:1px solid #c9bff0;padding:8px;text-align:left}
+th{background:#e7defc}
+@media(max-width:500px){.profile,.details{display:flex;flex-direction:column}.profile img{width:100%}nav{gap:10px}}
 </style>
 </head>
 <body>
 <div class="frame">
-<h1>HTML &amp; CSS Assignment</h1>
-<h3>Create a webpage using HTML and CSS that includes:</h3>
-<ol>
-<li><b>A link</b> – Add a clickable link.</li>
-<li><b>An image</b> – Include an image of your choice.</li>
-<li><b>A table</b> – Display information in a table.</li>
-<li><b>Borders</b> – Use borders for different elements.</li>
-<li><b>Padding</b> – Add space inside elements.</li>
-</ol>
-<hr>
-<p>Feel free to get creative! Design a personal webpage, product showcase, or food menu.</p>
-<h3 class="happy">Happy Coding! 😊</h3>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">My Photos</a>
+<a href="#contact">Contact</a>
+</nav>
+<div class="profile" id="home">
+<div class="intro">
+<h1>My Profile</h1>
+<p>Hi! I'm a web development enthusiast and I love learning new technologies.</p>
+<a class="button" href="https://github.com/" target="_blank">Visit My GitHub</a>
+</div>
+<img src="C:\Users\Manoj\Pictures\Screenshots\Screenshot 2026-10-28 135252.png" alt="Mountain landscape">
+</div>
+<div class="details">
+<div class="box" id="skills">
+<h3>My Skills</h3>
+<ul><li>HTML & CSS</li><li>JavaScript</li><li>Problem Solving</li><li>Teamwork</li></ul>
+</div>
+<div class="box" id="about">
+<h3>Education Details</h3>
+<table>
+<tr><th>Degree</th><th>College</th><th>Year</th></tr>
+<tr><td>B.E.</td><td>Engineering College</td><td>2021–2025</td></tr>
+<tr><td>M.Tech</td><td>Engineering College</td><td>2025–2027</td></tr>
+</table>
+</div>
+</div>
 </div>
 </body>
 </html>
